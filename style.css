@@ -1,4 +1,5 @@
 :root{
+    /* Basic colors */
     --main-white: #f0f0f0;
     --main-red: #be3144;
     --main-blue: #3356a9;
@@ -6,12 +7,26 @@
     --sec-blue: #7397ec;
     --sec-grey: #58606a;
 
+    /* Font sizes */
     --fs-xlarge: clamp(2.5rem, 5vw, 5rem);   /* h1 */
     --fs-large: clamp(1.8rem, 4vw, 3rem);   /* h2 */
     --fs-medium: clamp(1.2rem, 2.5vw, 2rem); /* body text */
     --fs-small: clamp(1rem, 2vw, 1.2rem);   /* small text, links */
 
-  }
+    /* Light theme (default) */
+    --main-bg: #ffffff;
+    --main-text: #1f1f1f;
+    --accent: #3356a9;
+    --highlight: #7397ec;
+
+    /* Dark mode theme override */
+    body.dark-mode {
+      --main-bg: #1f1f1f;
+      --main-text: #f0f0f0;
+      --accent: #7397ec;
+      --highlight: #3356a9;
+    }
+}
   
   *{
     margin: 0;
@@ -25,6 +40,33 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-size: var(--fs-md);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  a {
+    color: var(--accent);
+  }
+  
+  .nav {
+    background-color: var(--accent);
+  }
+  
+  .nav-list a:hover {
+    background-color: var(--highlight);
+  }
+  
+  .intro,
+  .projects-section,
+  .contact-section,
+  footer {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+  }
   
   .nav{
     display: flex;
@@ -34,7 +76,7 @@
     left: 0;
     width: 100%;
     height: 70px;
-    background: var(--main-blue);
+    /*background: var(--main-blue);*/
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   }
   
@@ -51,9 +93,11 @@
     text-shadow: 2px 2px 1px #1f1f1f;
   }
   
+  /*
   .nav-list a:hover{
     background: var(--sec-blue);
   }
+  */
   
   ul{
     list-style: none;
@@ -61,18 +105,18 @@
   
   a{
     text-decoration: none;
-    color: var(--main-white);
+    /*color: var(--main-white);*/
   }
   
   h1{
     font-size: var(--fs-xlarge);
-    color: var(--main-white);
+    /*color: var(--main-white);*/
   }
   
   .intro{
     width: 100%;
     height: 100vh;
-    background-color: var(--main-gray);
+    /*background-color: var(--main-gray);*/
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -82,12 +126,12 @@
   
   .intro > p{
     font-size: var(--fs-medium);
-    color: var(--main-white);
+    /*color: var(--main-white);*/
     font-style: italic;
   }
   
   .welcome-section{
-    background-color: var(--main-blue);
+    /*background-color: var(--main-blue);*/
     width: 100%;
     min-height: 100vh;
     align-items: center;
@@ -104,11 +148,11 @@
   .welcome-section > h2{
     font-size: var(--fs-large);
     font-style: italic;
-    color: var(--main-white);
+    /*color: var(--main-white);*/
   }
   
   .welcome-section > p{
-    color: var(--main-white);
+    /*color: var(--main-white);*/
     font-size: var(--fs-medium);
     margin-top: 70px;
     margin-left: 100px;
@@ -119,8 +163,8 @@
   .projects-section{
     text-align: center;
     padding: 10rem 2rem;
-    background-color: var(--main-gray);
-    color: var(--main-white);
+    /*background-color: var(--main-gray);*/
+    /*color: var(--main-white);*/
   }
   
   .projects-section-header{
@@ -144,10 +188,10 @@
   
   
   .project-tile {
-    background: var(--sec-grey);
+    /*background: var(--sec-grey);*/
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    color: var(--main-white);
+    /*color: var(--main-white);*/
     padding: 1rem;
   }
 
@@ -171,12 +215,12 @@
     width: 100%;
     min-height: 80vh;
     padding: 4rem 2rem;
-    background: var(--main-blue);
+    /*background: var(--main-blue);*/
   }
   
   .contact-section-header > h2 {
     font-size: var(--fs-large);
-    color: var(--main-white);
+    /*color: var(--main-white);*/
   }
   
   .contact-links {
@@ -205,14 +249,14 @@
     display: flex;
     justify-content: space-evenly;
     padding: 0.3rem;
-    background: var(--main-gray);
+    /*background: var(--main-gray);*/
     border-top: 4px solid var(--sec-blue);
   }
   
   footer > p {
     margin: 2rem;
     font-size: var(--fs-small);
-    color: var(--main-white);
+    /*color: var(--main-white);*/
   }
   
   footer i {
@@ -224,4 +268,16 @@
       flex-direction: column;
       text-align: center;
     }
+  }
+
+  #theme-toggle {
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 0 1rem;
+    background: none;
+    border: 2px solid var(--highlight);
+    color: var(--main-text);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
