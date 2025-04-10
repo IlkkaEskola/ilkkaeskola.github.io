@@ -1,0 +1,227 @@
+:root{
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #3356a9;
+    --main-gray: #37404b;
+    --sec-blue: #7397ec;
+    --sec-grey: #58606a;
+
+    --fs-xlarge: clamp(2.5rem, 5vw, 5rem);   /* h1 */
+    --fs-large: clamp(1.8rem, 4vw, 3rem);   /* h2 */
+    --fs-medium: clamp(1.2rem, 2.5vw, 2rem); /* body text */
+    --fs-small: clamp(1rem, 2vw, 1.2rem);   /* small text, links */
+
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .nav{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--main-blue);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  }
+  
+  .nav-list{
+    display: flex;
+    margin-right: 3rem;
+    align-items: center;
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: var(--fs-medium);
+    padding: 1.2rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+  }
+  
+  .nav-list a:hover{
+    background: var(--sec-blue);
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+    color: var(--main-white);
+  }
+  
+  h1{
+    font-size: var(--fs-xlarge);
+    color: var(--main-white);
+  }
+  
+  .intro{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-gray);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+  }
+  
+  .intro > p{
+    font-size: var(--fs-medium);
+    color: var(--main-white);
+    font-style: italic;
+  }
+  
+  .welcome-section{
+    background-color: var(--main-blue);
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+  
+  .welcome-section > h1{
+    font-size: var(--fs-xlarge);
+  }
+  
+  .welcome-section > h2{
+    font-size: var(--fs-large);
+    font-style: italic;
+    color: var(--main-white);
+  }
+  
+  .welcome-section > p{
+    color: var(--main-white);
+    font-size: var(--fs-medium);
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+    line-height: 1.5;
+  }
+  
+  .projects-section{
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+  }
+  
+  .projects-section-header{
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.3rem solid var(--main-white);
+  }
+  
+  
+  
+  .projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+  
+  
+  .project-tile {
+    background: var(--sec-grey);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    color: var(--main-white);
+    padding: 1rem;
+  }
+
+  .project-tile:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 80vh;
+    padding: 4rem 2rem;
+    background: var(--main-blue);
+  }
+  
+  .contact-section-header > h2 {
+    font-size: var(--fs-large);
+    color: var(--main-white);
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details {
+    font-size: var(--fs-medium);
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+  
+  footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.3rem;
+    background: var(--main-gray);
+    border-top: 4px solid var(--sec-blue);
+  }
+  
+  footer > p {
+    margin: 2rem;
+    font-size: var(--fs-small);
+    color: var(--main-white);
+  }
+  
+  footer i {
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 28.75em) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
