@@ -172,6 +172,12 @@
     margin: 0 auto 6rem auto;
     border-bottom: 0.3rem solid var(--main-text);
   }
+
+  .projects-section > h2{
+    font-style: italic;
+    font-size: var(--fs-medium);
+    margin: 10px;
+  }
   
   
   
