@@ -199,6 +199,9 @@
     border-radius: 2px;
     /*color: var(--main-white);*/
     padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .project-tile:hover {
@@ -287,3 +290,11 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
+
+  .hover-expand:hover{
+    transform: scale(2.5);
+    transition: transform 0.6s ease;
+    z-index: 5;
+  }
+
+  
