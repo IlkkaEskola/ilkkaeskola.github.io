@@ -159,6 +159,12 @@
     margin-right: 100px;
     line-height: 1.5;
   }
+
+  .profile-image {
+    height: 50%;
+    border-radius: 120px;
+    margin-top: 30px;
+  }
   
   .projects-section{
     text-align: center;
@@ -289,6 +295,10 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+  }
+
+  .hover-expand > h3, p{
+    color: var(--accent);
   }
 
   .hover-expand:hover{
